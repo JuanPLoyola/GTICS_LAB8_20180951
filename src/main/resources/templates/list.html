@@ -42,8 +42,8 @@
         </tr>
         </thead>
         <tbody>
-        <tr th:each="Pelicula, info : ${listaPeliculas}">
-            <td th:text="${info.index + 1}"></td>
+        <tr th:each="Pelicula, info : ${ListarPeliculas}">
+            <td th:text="${Peliculas.idPelicula}"></td>
             <td th:text="${Peliculas.nombre}"></td>
             <td th:text="${Peliculas.cine}"></td>
             <td th:text="${Peliculas.overview}"></td>

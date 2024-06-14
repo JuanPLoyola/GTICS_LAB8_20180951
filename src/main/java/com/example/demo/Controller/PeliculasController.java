@@ -1,7 +1,7 @@
 package com.example.demo.Controller;
 
 
-import ch.qos.logback.core.model.Model;
+import org.springframework.ui.Model;
 import com.example.demo.Dao.PeliculasDao;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,6 +18,7 @@ public class PeliculasController {
 
     @GetMapping({"/list", "/"})
     public String ListarPeliculas(Model model){
-        model.addAtributte("ListaPeliculas", peliculasDao.listar());
+        model.addAttribute("ListaPeliculas", peliculasDao.listar());
+        return "/list";
     }
 }
